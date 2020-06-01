@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="esr-fz-hqQ">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--BigVC-->
+        <scene sceneID="jl8-0h-D6H">
+            <objects>
+                <viewController id="esr-fz-hqQ" customClass="bigVC" customModule="CalculatorForMyCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mXR-Cm-Fw1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J4e-tn-gWS">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="kdk-6v-1Wr" kind="embed" id="hSJ-PW-a7r"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LEb-8f-UuY">
+                                <rect key="frame" x="-262.5" y="0.0" width="262.5" height="667"/>
+                                <connections>
+                                    <segue destination="wpc-hH-Kyr" kind="embed" id="E2o-I1-KgG"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="J4e-tn-gWS" firstAttribute="leading" secondItem="Hgr-84-VdO" secondAttribute="leading" id="Fhk-lF-HVD"/>
+                            <constraint firstItem="Hgr-84-VdO" firstAttribute="bottom" secondItem="J4e-tn-gWS" secondAttribute="bottom" id="azd-mP-uWL"/>
+                            <constraint firstItem="J4e-tn-gWS" firstAttribute="leading" secondItem="LEb-8f-UuY" secondAttribute="trailing" id="hPJ-fo-3DS"/>
+                            <constraint firstItem="LEb-8f-UuY" firstAttribute="width" secondItem="mXR-Cm-Fw1" secondAttribute="width" multiplier="0.7" id="k8q-jx-0fw"/>
+                            <constraint firstItem="J4e-tn-gWS" firstAttribute="top" secondItem="mXR-Cm-Fw1" secondAttribute="top" id="tfU-rV-NhW"/>
+                            <constraint firstItem="LEb-8f-UuY" firstAttribute="top" secondItem="mXR-Cm-Fw1" secondAttribute="top" id="wHK-qn-NVL"/>
+                            <constraint firstItem="J4e-tn-gWS" firstAttribute="width" secondItem="mXR-Cm-Fw1" secondAttribute="width" id="xbE-Ss-xhB"/>
+                            <constraint firstItem="Hgr-84-VdO" firstAttribute="bottom" secondItem="LEb-8f-UuY" secondAttribute="bottom" id="zRl-xz-tht"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Hgr-84-VdO"/>
+                    </view>
+                    <connections>
+                        <outlet property="SideMenuLayout" destination="Fhk-lF-HVD" id="8oH-KJ-mbB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZp-9c-zDP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="-1246"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalculatorForMyCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CALCULATOR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbZ-bT-Kk0">
+                                <rect key="frame" x="56" y="16" width="263" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="CXw-2D-RxW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="25" translatesAutoresizingMaskIntoConstraints="NO" id="8CL-BE-dQd">
+                                <rect key="frame" x="8" y="77" width="359" height="107.5"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DH-KO-ewi" customClass="myShadowView" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="200.5" width="375" height="466.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ShW-5C-PyM">
+                                        <rect key="frame" x="8" y="8" width="359" height="450.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-og-HbS">
+                                                <rect key="frame" x="0.0" y="0.0" width="359" height="83.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ou-Ki-VAV" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="83.5"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="9Ou-Ki-VAV" secondAttribute="height" multiplier="1:1" id="2Mi-nH-JVp"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title="AC">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="ACbuttonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pk0-Q9-Ehn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JKl-Fa-7ld" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="92" y="0.0" width="83.5" height="83.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title="±">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="minusPlusButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vHn-Sa-ymn"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sr6-7N-zaU" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="183.5" y="0.0" width="84" height="83.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title="%">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtn-B0-Zjs" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="275.5" y="0.0" width="83.5" height="83.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title="/">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationButtonAciton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SOo-Wb-AgT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jeu-3m-lRm">
+                                                <rect key="frame" x="0.0" y="91.5" width="359" height="84"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7L6-Wr-Kc5" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="7">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sqg-iF-sDA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nIQ-Sk-c4z" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="92" y="0.0" width="83.5" height="84"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="8">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BwJ-6N-2kR"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awy-L7-1Bi" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="183.5" y="0.0" width="84" height="84"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="9">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJ7-EU-wnT"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x24-V2-PkI" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="275.5" y="0.0" width="83.5" height="84"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title="x">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationButtonAciton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sw4-gR-pkP"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="qOx-QY-Dcx">
+                                                <rect key="frame" x="0.0" y="183.5" width="359" height="83.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qeT-90-fGW" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="83.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="4">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ak-rT-71Z"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HeE-8i-FVG" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="92" y="0.0" width="83.5" height="83.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="5">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i7h-sR-mxh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5eT-jE-U20" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="183.5" y="0.0" width="84" height="83.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="6">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yzk-Z1-3Wz"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8a-Bd-1fi" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="275.5" y="0.0" width="83.5" height="83.5"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title="-">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationButtonAciton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xVh-fY-Jwi"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2ra-FH-xZo">
+                                                <rect key="frame" x="0.0" y="275" width="359" height="84"/>
+                                                <subviews>
+                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AVx-BV-F3U" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="84" height="84"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="1">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ejv-iX-nNu"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jc3-ma-W0L" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="92" y="0.0" width="83.5" height="84"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="2">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vjq-mv-ufA"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbR-7x-gus" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="183.5" y="0.0" width="84" height="84"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="3">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hac-KQ-mEG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKk-lK-kQp" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="275.5" y="0.0" width="83.5" height="84"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title="+">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationButtonAciton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8F1-61-4ef"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XHt-VP-eYi">
+                                                <rect key="frame" x="0.0" y="367" width="359" height="83.5"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oyd-ud-XHM" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="175.5" height="83.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="35"/>
+                                                        <state key="normal" title="  0">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pg8-yS-J9b"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" tag="-1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaE-xd-55J" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="183.5" y="0.0" width="84" height="83.5"/>
+                                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.098967251712328771" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="VaE-xd-55J" secondAttribute="height" multiplier="1:1" id="HuA-7L-7pK"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title=".">
+                                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="buttonsAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bvY-8x-RC5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31D-bT-Pjl" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                        <rect key="frame" x="275.5" y="0.0" width="83.5" height="83.5"/>
+                                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="31D-bT-Pjl" secondAttribute="height" multiplier="1:1" id="7Yh-bW-Ico"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="28"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" red="0.23921568627450981" green="0.37254901960784315" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="operationButtonAciton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XTg-vU-U64"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ShW-5C-PyM" firstAttribute="leading" secondItem="2DH-KO-ewi" secondAttribute="leading" constant="8" id="14M-s6-dzV"/>
+                                    <constraint firstItem="ShW-5C-PyM" firstAttribute="top" secondItem="2DH-KO-ewi" secondAttribute="top" constant="8" id="JMV-fe-Vq9"/>
+                                    <constraint firstAttribute="trailing" secondItem="ShW-5C-PyM" secondAttribute="trailing" constant="8" id="LcB-vS-XOB"/>
+                                    <constraint firstAttribute="bottom" secondItem="ShW-5C-PyM" secondAttribute="bottom" constant="8" id="rOL-dg-c3l"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z0H-8B-E54">
+                                <rect key="frame" x="8" y="16" width="40" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9wx-6M-AHB"/>
+                                    <constraint firstAttribute="height" constant="25" id="PRb-84-Hos"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99553110060000005" green="0.99866162869999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="SideMenu" image="Menu">
+                                    <color key="titleColor" red="0.99553110060000005" green="0.99866162869999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="SideMenuAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rGN-7m-bwU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.59607843140000005" green="0.22352941179999999" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="pbZ-bT-Kk0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0E6-FC-vNf"/>
+                            <constraint firstItem="8CL-BE-dQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="6xK-bf-XvB"/>
+                            <constraint firstItem="8CL-BE-dQd" firstAttribute="top" secondItem="pbZ-bT-Kk0" secondAttribute="bottom" constant="36" id="9f9-uZ-ijy"/>
+                            <constraint firstItem="pbZ-bT-Kk0" firstAttribute="leading" secondItem="z0H-8B-E54" secondAttribute="trailing" constant="8" id="B15-yH-FuQ"/>
+                            <constraint firstItem="2DH-KO-ewi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qod-BI-I96"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2DH-KO-ewi" secondAttribute="bottom" id="Z7s-aC-x1Z"/>
+                            <constraint firstItem="2DH-KO-ewi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="a7b-GZ-bxL"/>
+                            <constraint firstItem="pbZ-bT-Kk0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="iXE-yj-Z8A"/>
+                            <constraint firstItem="z0H-8B-E54" firstAttribute="centerY" secondItem="pbZ-bT-Kk0" secondAttribute="centerY" id="ipM-jt-InW"/>
+                            <constraint firstItem="2DH-KO-ewi" firstAttribute="top" secondItem="8CL-BE-dQd" secondAttribute="bottom" constant="16" id="l0O-Zv-FBl"/>
+                            <constraint firstItem="z0H-8B-E54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="q2a-IK-Eyj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8CL-BE-dQd" secondAttribute="trailing" constant="8" id="qbf-sa-SuO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="resultLabel" destination="8CL-BE-dQd" id="kzA-q0-8TH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1529" y="-49"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZwZ-t9-lae">
+            <objects>
+                <viewController id="Gzv-rZ-TS8" customClass="ViewController" customModule="CalculatorForMyCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SMV-O4-Sbm" customClass="myShadowView" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POw-GC-YcV">
+                                <rect key="frame" x="8" y="16" width="40" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="11h-Vl-wCH"/>
+                                    <constraint firstAttribute="height" constant="25" id="Gxf-cF-p34"/>
+                                    <constraint firstAttribute="width" constant="40" id="YNq-eF-vMm"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="pSU-8C-OxN"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99553110060000005" green="0.99866162869999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="SideMenu" image="Menu">
+                                    <color key="titleColor" red="0.99553110060000005" green="0.99866162869999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="SideMenuAction:" destination="Gzv-rZ-TS8" eventType="touchUpInside" id="bJB-tM-uYG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bAg-FI-4dB">
+                                <rect key="frame" x="56" y="16" width="263" height="25"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saad Alessa " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isy-fC-2gI">
+                                <rect key="frame" x="16" y="176" width="343" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saudi Arabia" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iud-zB-TFr">
+                                <rect key="frame" x="16" y="259" width="343" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riyadh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CCT-xO-OZI">
+                                <rect key="frame" x="16" y="342" width="343" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.19766298530000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="CCT-xO-OZI" firstAttribute="trailing" secondItem="isy-fC-2gI" secondAttribute="trailing" id="3JX-Dt-vji"/>
+                            <constraint firstItem="CCT-xO-OZI" firstAttribute="leading" secondItem="isy-fC-2gI" secondAttribute="leading" id="4VA-Hl-df6"/>
+                            <constraint firstItem="bAg-FI-4dB" firstAttribute="centerX" secondItem="SMV-O4-Sbm" secondAttribute="centerX" id="4fk-sX-op3"/>
+                            <constraint firstItem="CCT-xO-OZI" firstAttribute="top" secondItem="Iud-zB-TFr" secondAttribute="bottom" constant="44" id="Eiq-Pb-RpP"/>
+                            <constraint firstItem="POw-GC-YcV" firstAttribute="centerY" secondItem="bAg-FI-4dB" secondAttribute="centerY" id="J2l-l0-sHC"/>
+                            <constraint firstItem="CCT-xO-OZI" firstAttribute="trailing" secondItem="Iud-zB-TFr" secondAttribute="trailing" id="N0P-UU-Yay"/>
+                            <constraint firstItem="bAg-FI-4dB" firstAttribute="leading" secondItem="POw-GC-YcV" secondAttribute="trailing" constant="8" id="Vh9-yL-CWo"/>
+                            <constraint firstItem="isy-fC-2gI" firstAttribute="top" secondItem="bAg-FI-4dB" secondAttribute="bottom" constant="135" id="Y2P-OQ-4Tf"/>
+                            <constraint firstItem="POw-GC-YcV" firstAttribute="top" secondItem="F4g-0u-tn6" secondAttribute="top" constant="16" id="c1b-te-sQP"/>
+                            <constraint firstItem="bAg-FI-4dB" firstAttribute="top" secondItem="F4g-0u-tn6" secondAttribute="top" constant="16" id="d8Q-Ku-ujt"/>
+                            <constraint firstItem="Iud-zB-TFr" firstAttribute="top" secondItem="isy-fC-2gI" secondAttribute="bottom" constant="44" id="d9h-et-Bco"/>
+                            <constraint firstItem="CCT-xO-OZI" firstAttribute="leading" secondItem="Iud-zB-TFr" secondAttribute="leading" id="frh-2d-ngu"/>
+                            <constraint firstItem="POw-GC-YcV" firstAttribute="leading" secondItem="F4g-0u-tn6" secondAttribute="leading" constant="8" id="iZK-AE-uFf"/>
+                            <constraint firstItem="isy-fC-2gI" firstAttribute="leading" secondItem="F4g-0u-tn6" secondAttribute="leading" constant="16" id="mDy-cO-FN1"/>
+                            <constraint firstItem="F4g-0u-tn6" firstAttribute="trailing" secondItem="isy-fC-2gI" secondAttribute="trailing" constant="16" id="nPk-K5-Kb2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F4g-0u-tn6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tTu-H8-Nkv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2468" y="-49"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jPv-Bc-11N">
+            <objects>
+                <viewController id="fWF-e1-tuK" customClass="ViewController" customModule="CalculatorForMyCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uN0-S5-4y0" customClass="myShadowView" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eI-Rj-AWh">
+                                <rect key="frame" x="8" y="16" width="40" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="0sG-Ki-2zu"/>
+                                    <constraint firstAttribute="height" constant="25" id="RGm-3N-Kyj"/>
+                                    <constraint firstAttribute="width" constant="40" id="dSW-FY-cpW"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="40" id="jif-6V-u3w"/>
+                                </constraints>
+                                <color key="tintColor" red="0.99553110060000005" green="0.99866162869999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="SideMenu" image="Menu">
+                                    <color key="titleColor" red="0.99553110060000005" green="0.99866162869999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="SideMenuAction:" destination="fWF-e1-tuK" eventType="touchUpInside" id="eWJ-xc-lrQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contact us" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dz-2N-yh7">
+                                <rect key="frame" x="56" y="16" width="263" height="25"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="phone: -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFU-2T-Xdd">
+                                <rect key="frame" x="16" y="176" width="343" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="line: -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efo-zM-afq">
+                                <rect key="frame" x="16" y="259" width="343" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email: -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywx-5i-QVL">
+                                <rect key="frame" x="16" y="342" width="343" height="39"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72551382529999997" blue="0.31713963109999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="kLp-8L-NIq" firstAttribute="trailing" secondItem="ywx-5i-QVL" secondAttribute="trailing" constant="16" id="5hK-Yi-xp9"/>
+                            <constraint firstItem="1eI-Rj-AWh" firstAttribute="leading" secondItem="kLp-8L-NIq" secondAttribute="leading" constant="8" id="AKS-IV-tmh"/>
+                            <constraint firstItem="Efo-zM-afq" firstAttribute="leading" secondItem="kLp-8L-NIq" secondAttribute="leading" constant="16" id="CBH-gJ-Rj9"/>
+                            <constraint firstItem="8dz-2N-yh7" firstAttribute="centerX" secondItem="uN0-S5-4y0" secondAttribute="centerX" id="MH6-LT-Mzd"/>
+                            <constraint firstItem="NFU-2T-Xdd" firstAttribute="leading" secondItem="kLp-8L-NIq" secondAttribute="leading" constant="16" id="WLc-yJ-Btp"/>
+                            <constraint firstItem="1eI-Rj-AWh" firstAttribute="top" secondItem="kLp-8L-NIq" secondAttribute="top" constant="16" id="afa-L2-iG7"/>
+                            <constraint firstItem="ywx-5i-QVL" firstAttribute="top" secondItem="Efo-zM-afq" secondAttribute="bottom" constant="44" id="cOI-6v-F6S"/>
+                            <constraint firstItem="8dz-2N-yh7" firstAttribute="top" secondItem="kLp-8L-NIq" secondAttribute="top" constant="16" id="gRx-Pe-9iB"/>
+                            <constraint firstItem="Efo-zM-afq" firstAttribute="top" secondItem="NFU-2T-Xdd" secondAttribute="bottom" constant="44" id="lt9-Cn-NXy"/>
+                            <constraint firstItem="8dz-2N-yh7" firstAttribute="leading" secondItem="1eI-Rj-AWh" secondAttribute="trailing" constant="8" id="qOs-KY-8es"/>
+                            <constraint firstItem="NFU-2T-Xdd" firstAttribute="top" secondItem="8dz-2N-yh7" secondAttribute="bottom" constant="135" id="skd-4s-6L8"/>
+                            <constraint firstItem="ywx-5i-QVL" firstAttribute="leading" secondItem="kLp-8L-NIq" secondAttribute="leading" constant="16" id="uuQ-mr-3Ob"/>
+                            <constraint firstItem="kLp-8L-NIq" firstAttribute="trailing" secondItem="Efo-zM-afq" secondAttribute="trailing" constant="16" id="viI-1g-bbg"/>
+                            <constraint firstItem="kLp-8L-NIq" firstAttribute="trailing" secondItem="NFU-2T-Xdd" secondAttribute="trailing" constant="16" id="wtx-2s-Hjz"/>
+                            <constraint firstItem="1eI-Rj-AWh" firstAttribute="centerY" secondItem="8dz-2N-yh7" secondAttribute="centerY" id="yRj-3d-vZv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kLp-8L-NIq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mMk-Nz-212" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3348" y="-49"/>
+        </scene>
+        <!--Segue MenuVC-->
+        <scene sceneID="Gc0-Rs-vU0">
+            <objects>
+                <viewController id="649-Sq-Pa3" customClass="SegueMenuVC" customModule="CalculatorForMyCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N1b-R5-dME">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xUG-22-zpG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="saR-2H-iyy"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="Main" animates="NO" id="nKd-8H-qLq"/>
+                        <segue destination="Gzv-rZ-TS8" kind="show" identifier="AboutUs" id="jVT-Fd-yQi"/>
+                        <segue destination="fWF-e1-tuK" kind="show" identifier="ContactUs" id="BBG-AZ-oDi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KQM-fV-Yyp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2468" y="-1246.3268365817091"/>
+        </scene>
+        <!--Side Menu Vc-->
+        <scene sceneID="YDE-IN-i5g">
+            <objects>
+                <viewController id="wpc-hH-Kyr" customClass="SideMenuVc" customModule="CalculatorForMyCourse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V4D-Pj-4mY">
+                        <rect key="frame" x="0.0" y="0.0" width="262.5" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8E-H2-wyt" customClass="mySideShadow" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="258.5" height="667"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="kNg-My-WVy">
+                                        <rect key="frame" x="29.5" y="197.5" width="200" height="250"/>
+                                        <subviews>
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kd9-fj-m7P" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.097575984589041098" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="D78-gu-HUa"/>
+                                                    <constraint firstAttribute="height" constant="50" id="OYv-Ov-FjG"/>
+                                                    <constraint firstAttribute="width" constant="200" id="swW-nD-JF4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="Main">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonsAction:" destination="wpc-hH-Kyr" eventType="touchUpInside" id="gZI-VR-srC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hlc-pj-B9M" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="100" width="200" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.097575984589999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="About us">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonsAction:" destination="wpc-hH-Kyr" eventType="touchUpInside" id="wzH-GL-yKv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYW-xK-KIQ" customClass="myCustomButton" customModule="CalculatorForMyCourse" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="200" width="200" height="50"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.097575984589999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                <state key="normal" title="Contact us">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonsAction:" destination="wpc-hH-Kyr" eventType="touchUpInside" id="FUi-xN-LAt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NGM-oq-PzC">
+                                        <rect key="frame" x="48.5" y="32" width="161.5" height="30.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.47190773255551099" green="0.2912583205596766" blue="0.57672252751849018" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="kNg-My-WVy" firstAttribute="centerX" secondItem="K8E-H2-wyt" secondAttribute="centerX" id="EjW-Vi-fyy"/>
+                                    <constraint firstItem="NGM-oq-PzC" firstAttribute="top" secondItem="K8E-H2-wyt" secondAttribute="top" constant="32" id="o8M-HE-8Vs"/>
+                                    <constraint firstItem="kNg-My-WVy" firstAttribute="top" secondItem="NGM-oq-PzC" secondAttribute="bottom" constant="135" id="qLa-np-QK7"/>
+                                    <constraint firstItem="NGM-oq-PzC" firstAttribute="centerX" secondItem="K8E-H2-wyt" secondAttribute="centerX" id="zCR-em-NeP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40306669694400488" green="0.21583900217920859" blue="0.46660850253807107" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="XyG-QK-xpq" firstAttribute="bottom" secondItem="K8E-H2-wyt" secondAttribute="bottom" id="8Da-nm-QsC"/>
+                            <constraint firstAttribute="trailing" secondItem="K8E-H2-wyt" secondAttribute="trailing" constant="4" id="gZD-bO-4Rc"/>
+                            <constraint firstItem="K8E-H2-wyt" firstAttribute="top" secondItem="V4D-Pj-4mY" secondAttribute="top" id="yAQ-JV-pX9"/>
+                            <constraint firstItem="K8E-H2-wyt" firstAttribute="leading" secondItem="V4D-Pj-4mY" secondAttribute="leading" id="ynj-3z-LSA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XyG-QK-xpq"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nkZ-PA-dj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32" y="-49"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ink-H5-ag4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="kdk-6v-1Wr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mHB-PZ-jMd">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="649-Sq-Pa3" kind="relationship" relationship="rootViewController" id="OlJ-IN-jdl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5wR-UD-s7w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1528.8" y="-1246.3268365817091"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Menu" width="128" height="85"/>
+    </resources>
+</document>
